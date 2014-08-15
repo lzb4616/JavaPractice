@@ -15,6 +15,11 @@ import java.io.Serializable;
  *(即通过网络传递一个对象)，定义在消息队列中的数据类型ObjectMessage.
  *
  *注意：显示声明serialVersionUID可以避免对象不一致，但尽量不要以这种方式向JVM“撒谎”
+ *
+ *反序列化时final变量在以下情况不会被重新赋值
+ *1.通过构造函数为final变量赋值。
+ *2.通过方法返回值为final变量赋值。
+ *3.final修饰的属性不是基本类型。
  */
 public class Person implements Serializable {
 
@@ -22,6 +27,20 @@ public class Person implements Serializable {
 	//但是可以强制两个类一样，这就需要如下这样显示声明。
 	private static final long serialVersionUID = 55799L;
 	
+	//public final String names = "123"; 这个如果改变类的版本，值会变
+	/**使用函数，还有构造函数赋值final值，不会因类的版本改变而改变*/
+	//public final String names = initName();
+	public final String names ;
+	public String getNames() {
+		return names;
+	}
+
+	public Person(){
+		names = "123";
+	}
+	public String initName(){
+		return "321";
+	}
 	private String name;
 	//测试属性
 //	private int age;
