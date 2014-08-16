@@ -7,14 +7,14 @@ import java.util.Random;
 
 /**
  * @author zibin
- *³£Á¿ÍÉ±ä±äÁ¿ÎÊÌâ
+ *å¸¸é‡èœ•å˜å˜é‡é—®é¢˜
  *
  */
 public class Question2 {
 
 	private static Question2 question2 ;
 	public static final int RAND_CONST = new Random().nextInt();
-	/*µ¥Àı²âÊÔ³£Á¿±äÁ¿ÎÊÌâ*/
+	/*å•ä¾‹æµ‹è¯•å¸¸é‡å˜é‡é—®é¢˜*/
 	public static Question2 getQuestion2(){
 		if (question2 ==null) {
 			synchronized (Question2.class) {
@@ -30,19 +30,19 @@ public class Question2 {
 	 */
 	public static void main(String[] args) {
 		for (int i = 0; i < 10; i++) {
-			System.out.println("³£Á¿»á±ä£º"+Const.RAND_CONST);//»áÊä³öÏàÍ¬µÄÖµ£¬³£Á¿»á±äÊÇÒ»¸ö¼ÙÏó£¬
+			System.out.println("å¸¸é‡ä¼šå˜ï¼š"+Const.RAND_CONST);//ä¼šè¾“å‡ºç›¸åŒçš„å€¼ï¼Œå¸¸é‡ä¼šå˜æ˜¯ä¸€ä¸ªå‡è±¡ï¼Œ
 		}
-		//µ«Èç¹ûÃ¿Ò»´ÎÔËĞĞÈ·Êµ»á½«³£Á¿±äÎª±äÁ¿(¶ÔÏóÖØĞÂÊµÀıÔì³ÉµÄ)£¬Ö÷ÒªÊÇÖªµÀ£¬³£Á¿²»ÄÜ¹»ÕâÑùÈ¥¸³Öµ£¬ÕâÑù¸³Öµ»áÈİÒ×Ôì³É³£Á¿µÄÎó¶Á
-		System.out.println("³£Á¿»á±ä£º"+Const.RAND_CONST);
+		//ä½†å¦‚æœæ¯ä¸€æ¬¡è¿è¡Œç¡®å®ä¼šå°†å¸¸é‡å˜ä¸ºå˜é‡(å¯¹è±¡é‡æ–°å®ä¾‹é€ æˆçš„)ï¼Œä¸»è¦æ˜¯çŸ¥é“ï¼Œå¸¸é‡ä¸èƒ½å¤Ÿè¿™æ ·å»èµ‹å€¼ï¼Œè¿™æ ·èµ‹å€¼ä¼šå®¹æ˜“é€ æˆå¸¸é‡çš„è¯¯è¯»
+		System.out.println("å¸¸é‡ä¼šå˜ï¼š"+Const.RAND_CONST);
 	}
 	
-	/*½Ó¿Ú³£Á¿*/
+	/*æ¥å£å¸¸é‡*/
 	interface Const{
 		public static final int RAND_CONST = new Random().nextInt();
 	}
 	
-	/*³£Á¿¾ÍÊÇ³£Á¿£¬ÔÚ±àÒëÆÚ¾Í±ØĞëÈ·¶¨ÆäÖµ£¬²»Ó¦¸ÃÔÚÔËĞĞÆÚ¸ü¸Ä
+	/*å¸¸é‡å°±æ˜¯å¸¸é‡ï¼Œåœ¨ç¼–è¯‘æœŸå°±å¿…é¡»ç¡®å®šå…¶å€¼ï¼Œä¸åº”è¯¥åœ¨è¿è¡ŒæœŸæ›´æ”¹
 	 * 
-	 * ×¢Òâ²»ÒªÊ¹ÓÃ³£Á¿»á±äµÄÕâ¸ö¹¦ÄÜÀ´ÊµÏÖĞòÁĞËã·¨£¬Ëæ»úÖÖ×ÓÉú³É
+	 * æ³¨æ„ä¸è¦ä½¿ç”¨å¸¸é‡ä¼šå˜çš„è¿™ä¸ªåŠŸèƒ½æ¥å®ç°åºåˆ—ç®—æ³•ï¼Œéšæœºç§å­ç”Ÿæˆ
 	 * */
 }
