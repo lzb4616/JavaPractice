@@ -14,7 +14,7 @@ public class Advice4 {
 	
 	public void calPrice(int price ,int discount){
 		float knockdownPrice = price*discount / 100.0F;
-		System.out.println("¼òµ¥ÕÛ¿Û¼ÛºóµÄ¼Û¸ñÊÇ£º"+formateCurrency(knockdownPrice));
+		System.out.println("ç®€å•æŠ˜æ‰£ä»·åçš„ä»·æ ¼æ˜¯ï¼š"+formateCurrency(knockdownPrice));
 	}
 	
 	public void calPrice(int price,int...discounts){
@@ -22,7 +22,7 @@ public class Advice4 {
 		for(int discount:discounts){
 			knockdownPrice = knockdownPrice*discount / 100;
 		}
-		System.out.println("¸´ÔÓÕÛ¿ÛºóµÄ¼Û¸ñÊÇ£º"+formateCurrency(knockdownPrice));
+		System.out.println("å¤æ‚æŠ˜æ‰£åçš„ä»·æ ¼æ˜¯ï¼š"+formateCurrency(knockdownPrice));
 	}
 	
 	private String formateCurrency(float price){
@@ -38,9 +38,9 @@ public class Advice4 {
 
 	}
 
-	/*µ±Ö»ÓĞÁ½¸ö²ÎÊıÊ±£¬Ëû»áÑ¡ÔñµÚÒ»¸ö·½·¨£¬ÒòÎªintÊÇÒ»¸öÔ­ÉúÊı¾İÀàĞÍ£¬¶øÊı×é±¾ÉíÊÇÒ»¸ö¶ÔÏó£¬±àÒëÆ÷Ëü»á´Ó×î¼òµ¥µÄ¿ªÊ¼²ÂÏë£¬Ö»Òª·ûºÏ
-	 * ±àÒëÌõ¼şµÄ¼´¿ÉÍ¨¹ı£¬ÓÚÊÇ¾Í³öÏÖÁË´ËÎÊÌâ¡£
+	/*å½“åªæœ‰ä¸¤ä¸ªå‚æ•°æ—¶ï¼Œä»–ä¼šé€‰æ‹©ç¬¬ä¸€ä¸ªæ–¹æ³•ï¼Œå› ä¸ºintæ˜¯ä¸€ä¸ªåŸç”Ÿæ•°æ®ç±»å‹ï¼Œè€Œæ•°ç»„æœ¬èº«æ˜¯ä¸€ä¸ªå¯¹è±¡ï¼Œç¼–è¯‘å™¨å®ƒä¼šä»æœ€ç®€å•çš„å¼€å§‹çŒœæƒ³ï¼Œåªè¦ç¬¦åˆ
+	 * ç¼–è¯‘æ¡ä»¶çš„å³å¯é€šè¿‡ï¼Œäºæ˜¯å°±å‡ºç°äº†æ­¤é—®é¢˜ã€‚
 	 * 
-	 * ËùÒÔÒªÉ÷ÖØ¿¼ÂÇ±ä³¤²ÎÊıµÄ·½·¨µÄÖØÔØ£¬ÈİÒ×³öÎÊÌâ¡£
+	 * æ‰€ä»¥è¦æ…é‡è€ƒè™‘å˜é•¿å‚æ•°çš„æ–¹æ³•çš„é‡è½½ï¼Œå®¹æ˜“å‡ºé—®é¢˜ã€‚
 	 * */
 }
