@@ -11,14 +11,14 @@ import java.text.NumberFormat;
 /**
  *2014-8-14
  * @author zibin
- *ÉÙÓÃ¾²Ì¬µ¼Èë
+ *å°‘ç”¨é™æ€å¯¼å…¥
  */
 public class Advice9 {
 
 	/**
-	 * ¶ÔÓÚ¾²Ì¬µ¼ÈëÒ»°ã×ñÑ­Á½¸ö¹æÔò
-	 * 1.²»Ê¹ÓÃ*£¨ÐÇºÅ£©Í¨Åä·û£¬³ý·ÇÊÇµ¼Èë¾²Ì¬³£Á¿Àà£¨Ö»°üº¬³£Á¿µÄÀà»ò½Ó¿Ú£©
-	 * 2.·½·¨Ãû¾ßÓÐÃ÷È·£¬ÇåÎú±íÏóÒâÒåµÄ¹¤¾ßÀà
+	 * å¯¹äºŽé™æ€å¯¼å…¥ä¸€èˆ¬éµå¾ªä¸¤ä¸ªè§„åˆ™
+	 * 1.ä¸ä½¿ç”¨*ï¼ˆæ˜Ÿå·ï¼‰é€šé…ç¬¦ï¼Œé™¤éžæ˜¯å¯¼å…¥é™æ€å¸¸é‡ç±»ï¼ˆåªåŒ…å«å¸¸é‡çš„ç±»æˆ–æŽ¥å£ï¼‰
+	 * 2.æ–¹æ³•åå…·æœ‰æ˜Žç¡®ï¼Œæ¸…æ™°è¡¨è±¡æ„ä¹‰çš„å·¥å…·ç±»
 	 * 
 	 * @param args
 	 */
@@ -29,14 +29,14 @@ public class Advice9 {
 		format.setMaximumFractionDigits(parseInt(args[1]));
 		formatMessage(format.format(s));
 		
-		/**ÉÏÃæÕâÒ»¶Î´úÂë¾ÍÊÇ¶Ô¾²Ì¬µ¼ÈëÀÄÓÃºóµ¼ÖÂµÄÔÄ¶ÁÀ§ÄÑ£¬ÒòÎªµ¼Èë¶à¸ö¾²Ì¬Àà£¬ËùÒÔÀïÃæµÄº¯Êý²»ÖªµÀÊÇ×Ô´øµÄ»¹ÊÇµ¼Èë£¬ºÜÈÝÒ×²úÉú
-		 * »ìÏý£¬ÊÇÔÄ¶Á´úÂëÀ§ÄÑ¡£
+		/**ä¸Šé¢è¿™ä¸€æ®µä»£ç å°±æ˜¯å¯¹é™æ€å¯¼å…¥æ»¥ç”¨åŽå¯¼è‡´çš„é˜…è¯»å›°éš¾ï¼Œå› ä¸ºå¯¼å…¥å¤šä¸ªé™æ€ç±»ï¼Œæ‰€ä»¥é‡Œé¢çš„å‡½æ•°ä¸çŸ¥é“æ˜¯è‡ªå¸¦çš„è¿˜æ˜¯å¯¼å…¥ï¼Œå¾ˆå®¹æ˜“äº§ç”Ÿ
+		 * æ··æ·†ï¼Œæ˜¯é˜…è¯»ä»£ç å›°éš¾ã€‚
 		 * */
 	}
 
-	/**ÒÔÏÂÁ½¸ö·µ»ØÖµµÄÒâÒåÊÇÒ»ÑùµÄ£¬µÚÒ»¸ö·µ»ØÖµº¬ÓÐMathÀà£¬ËùÒÔºÜ¿ìÃ÷°×PIµÄÒâÒåºÍÓÃÍ¾£¬µ«ÊÇ»áÔö¼Ó´úÂëÁ¿
-	 * µÚ¶þ¸ö·µ»ØÖµÖ±½Óµ÷ÓÃPIÖµ£¬ÒòÎªÖªµÀPIÖµÊÇÔ²ÖÜÂÊ£¬ËùÒÔ»áÊ¹³ÌÐò¸ü¼òµ¥£¬¸üÈÝÒ×ÔÄ¶Á£¬µ«ÊÇÀÄÓÃ¾²Ì¬µ¼Èë»áÊ¹³ÌÐò¸üÄÑÔÄ¶Á£¬¸üÄÑÎ¬»¤£¬
-	 * ÒòÎªÃ»ÓÐÏà¶ÔÓ¦µÄÀàÃû½øÐÐÒýµ¼¾²Ì¬³£Á¿µÄÒâÒå¡£
+	/**ä»¥ä¸‹ä¸¤ä¸ªè¿”å›žå€¼çš„æ„ä¹‰æ˜¯ä¸€æ ·çš„ï¼Œç¬¬ä¸€ä¸ªè¿”å›žå€¼å«æœ‰Mathç±»ï¼Œæ‰€ä»¥å¾ˆå¿«æ˜Žç™½PIçš„æ„ä¹‰å’Œç”¨é€”ï¼Œä½†æ˜¯ä¼šå¢žåŠ ä»£ç é‡
+	 * ç¬¬äºŒä¸ªè¿”å›žå€¼ç›´æŽ¥è°ƒç”¨PIå€¼ï¼Œå› ä¸ºçŸ¥é“PIå€¼æ˜¯åœ†å‘¨çŽ‡ï¼Œæ‰€ä»¥ä¼šä½¿ç¨‹åºæ›´ç®€å•ï¼Œæ›´å®¹æ˜“é˜…è¯»ï¼Œä½†æ˜¯æ»¥ç”¨é™æ€å¯¼å…¥ä¼šä½¿ç¨‹åºæ›´éš¾é˜…è¯»ï¼Œæ›´éš¾ç»´æŠ¤ï¼Œ
+	 * å› ä¸ºæ²¡æœ‰ç›¸å¯¹åº”çš„ç±»åè¿›è¡Œå¼•å¯¼é™æ€å¸¸é‡çš„æ„ä¹‰ã€‚
 	 * 
 	 * */
 	public static double calCircleArea(double r){
@@ -58,6 +58,6 @@ public class Advice9 {
 	}
 	
 	public static void formatMessage(String s) {
-		System.out.println("Ô²Ãæ»ýÊÇ£º"+s);
+		System.out.println("åœ†é¢ç§¯æ˜¯ï¼š"+s);
 	}
 }
