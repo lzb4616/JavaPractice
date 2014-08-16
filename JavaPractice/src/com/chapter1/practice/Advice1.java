@@ -1,13 +1,11 @@
-/**
- * 
- */
+
 package com.chapter1.practice;
 
 /**
  * @author zibin
- *²»ÒªÔÚ³£Á¿ºÍ±äÁ¿ÖÐ³öÏÖÒ×»ìÏýµÄ×ÖÄ¸
+ *ä¸è¦åœ¨å¸¸é‡å’Œå˜é‡ä¸­å‡ºçŽ°æ˜“æ··æ·†çš„å­—æ¯
  *
- *°üÃûÈ«Ð¡Ð´£¬ÀàÃûÊ××ÖÄ¸´óÐ´£¬³£Á¿È«²¿´óÐ´²¢ÓÃÏÂ»®Ïß·Ö¸ô£¬±äÁ¿²ÉÓÃÍÕ·åÃüÃû·¨¡£
+ *åŒ…åå…¨å°å†™ï¼Œç±»åé¦–å­—æ¯å¤§å†™ï¼Œå¸¸é‡å…¨éƒ¨å¤§å†™å¹¶ç”¨ä¸‹åˆ’çº¿åˆ†éš”ï¼Œå˜é‡é‡‡ç”¨é©¼å³°å‘½åæ³•ã€‚
  *
  */
 public class Advice1 {
@@ -17,9 +15,9 @@ public class Advice1 {
 	 */
 	public static void main(String[] args) {
 		
-		long i = 1l;//ºóÃæ¼ÓÁË³¤ÕûÐÍ±äÁ¿µÄ±êÊ¾×ÖÄ¸¡°l¡±
-		System.out.println("iµÄÁ½±¶ÊÇ£º"+(i+i));
+		long i = 1l;//åŽé¢åŠ äº†é•¿æ•´åž‹å˜é‡çš„æ ‡ç¤ºå­—æ¯â€œlâ€
+		System.out.println("içš„ä¸¤å€æ˜¯ï¼š"+(i+i));
 		
 	}
-	/*ËùÒÔ×ÖÄ¸ºÍÊý×Ö±ØÐë»ìºÏÊ¹ÓÃ£¬Ôò×ÖÄ¸¡°l¡±±ØÐë´óÐ´£¬×ÖÄ¸¡°O¡±ÔòÐèÒª×¢ÊÍ*/
+	/*æ‰€ä»¥å­—æ¯å’Œæ•°å­—å¿…é¡»æ··åˆä½¿ç”¨ï¼Œåˆ™å­—æ¯â€œlâ€å¿…é¡»å¤§å†™ï¼Œå­—æ¯â€œOâ€åˆ™éœ€è¦æ³¨é‡Š*/
 }
