@@ -7,7 +7,7 @@ package com.chapter1.practice;
  *2014-8-14
  * @author zibin
  *
- *±ðÈÃnullÖµºÍ¿ÕÖµÍþÐ²µ½±ä³¤·½·¨
+ *åˆ«è®©nullå€¼å’Œç©ºå€¼å¨èƒåˆ°å˜é•¿æ–¹æ³•
  */
 public class Advice5 {
 	
@@ -27,13 +27,13 @@ public class Advice5 {
 		Advice5 advice5 = new Advice5();
 		advice5.method("china", 0);
 		advice5.method("china"," people");
-		/*ÒÔÏÂÕâÁ½¸ö·½·¨µ÷ÓÃ£¬»áÔì³É±àÒëÆ÷µÄÊ¶±ð´íÎó£¬Î¥·´ÁËKISSÔ­Ôò£¨ÀÁÈËÔ­Ôò£©*/
+		/*ä»¥ä¸‹è¿™ä¸¤ä¸ªæ–¹æ³•è°ƒç”¨ï¼Œä¼šé€ æˆç¼–è¯‘å™¨çš„è¯†åˆ«é”™è¯¯ï¼Œè¿åäº†KISSåŽŸåˆ™ï¼ˆæ‡’äººåŽŸåˆ™ï¼‰*/
 //		advice5.method("china");
 //		advice5.method("china", null);
-		/*ÐÞ¸ÄÈçÏÂ*/
+		/*ä¿®æ”¹å¦‚ä¸‹*/
 		String[] strs = null;
 		advice5.method("china", strs);
-		//±ØÐëÖ¸Ã÷nullµÄÀàÐÍ£¬ÕâÑùµ÷ÓÃÊÇ²Å²»»á³öÏÖÒò²Â²âËùÒýÆðµÄÂß¼­´íÎó
+		//å¿…é¡»æŒ‡æ˜Žnullçš„ç±»åž‹ï¼Œè¿™æ ·è°ƒç”¨æ˜¯æ‰ä¸ä¼šå‡ºçŽ°å› çŒœæµ‹æ‰€å¼•èµ·çš„é€»è¾‘é”™è¯¯
 	}
 
 }
