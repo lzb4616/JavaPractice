@@ -7,7 +7,7 @@ package com.chapter1.practice.advice11;
  *2014-8-15
  * @author zibin
  *
- *¶¨ÒåÏûÏ¢µÄ½ÓÊÜÕß
+ *å®šä¹‰æ¶ˆæ¯çš„æ¥å—è€…
  */
 public class Consumer {
 
@@ -15,9 +15,9 @@ public class Consumer {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// ·´ĞòÁĞ»¯
+		// ååºåˆ—åŒ–
 		Person p = (Person) SerializationUtils.readObject();
-		System.out.println("Êä³ö==="+p.getNames());
+		System.out.println("è¾“å‡º==="+p.getNames());
 
 	}
 

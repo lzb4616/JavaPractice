@@ -14,13 +14,13 @@ import java.io.Serializable;
  *2014-8-15
  * @author zibin
  *
- *¶ÔÒ»¸öÀà½øĞĞĞòÁĞ»¯ºÍ·´ĞòÁĞ»¯£¬²¢´æ´¢µ½Ó²ÅÌÉÏ£¨Ä£ÄâÍøÂçÔËÊä£©
+ *å¯¹ä¸€ä¸ªç±»è¿›è¡Œåºåˆ—åŒ–å’Œååºåˆ—åŒ–ï¼Œå¹¶å­˜å‚¨åˆ°ç¡¬ç›˜ä¸Šï¼ˆæ¨¡æ‹Ÿç½‘ç»œè¿è¾“ï¼‰
  */
 public class SerializationUtils {
 
 	private static String FILE_NAME = "F:/obj.bin";
 	
-	//ĞòÁĞ»¯
+	//åºåˆ—åŒ–
 	public static void writeObject(Serializable s){
 		try {
 			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME));
@@ -33,7 +33,7 @@ public class SerializationUtils {
 	
 	public static Object readObject(){
 		Object obj = null;
-		//·´ĞòÁĞ»¯
+		//ååºåˆ—åŒ–
 		try {
 			ObjectInputStream input = new ObjectInputStream(new FileInputStream(FILE_NAME));
 			obj = input.readObject();

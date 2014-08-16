@@ -7,7 +7,7 @@ package com.chapter1.practice.advice11;
  *2014-8-15
  * @author zibin
  *
- *¶¨ÒåÏûÏ¢µÄÉú²úÕß
+ *å®šä¹‰æ¶ˆæ¯çš„ç”Ÿäº§è€…
  */
 public class Producer {
 
@@ -16,7 +16,7 @@ public class Producer {
 	 */
 	public static void main(String[] args) {
 		Person person = new Person();
-		person.setName("²âÊÔ");
+		person.setName("æµ‹è¯•");
 		SerializationUtils.writeObject(person);
 	}
 
