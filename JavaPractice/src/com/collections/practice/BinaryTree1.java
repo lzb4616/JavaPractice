@@ -1,4 +1,7 @@
 package com.collections.practice;
+
+import java.util.Arrays;
+
 /**
  * 2014-8-16
  * @author zibin
@@ -78,12 +81,18 @@ public class BinaryTree1 {
 	}	
 	public static void main(String [] args)
 	{
-		int [] data = new int[5];
-		for(int i=0;i<data.length;i++)
-		{
-			data[i] = (int)(Math.random()*100) + 1;
-			System.out.print(data[i] + ",");
-		}
+		int[] data = {9,14,1,12,4,3,13,10};
+//		int [] data = new int[10];
+//		for(int i=0;i<data.length;i++)
+//		{
+//			int j = (int)(Math.random()*100) + 1;
+//			while(!contains(j, data)){
+//				data[i] = j;
+//				j = (int)(Math.random()*100) + 1;
+//			}			
+//			System.out.print(data[i] + ",");
+//		}
+		System.out.println(Arrays.toString(data));
 		System.out.println();
 		
 		BinaryTree1 root = new BinaryTree1();
@@ -100,5 +109,14 @@ public class BinaryTree1 {
 		root.middleList();
 		System.out.println();		
 		root.afterList();
+	}
+	
+	public static Boolean contains(int value,int[] nums){
+		for (int i = 0; i < nums.length; i++) {
+			if (value == nums[i]) {
+				return true;
+			}
+		}
+		return false;
 	}
 }

@@ -52,10 +52,21 @@ public class BinaryTree {
 	}
 	
 	public void display(){
-		System.out.println(value);
+		System.out.print(value+",");
 		if(left != null) left.display();
 		if(right != null) right.display();
 		
+	}
+	public void display2(){
+		if(left != null) left.display();
+		System.out.print(value+",");
+		if(right != null) right.display();
+		
+	}
+	public void display3(){
+		if(left != null) left.display();
+		if(right != null) right.display();
+		System.out.print(value+",");
 	}
 	
 	/*public Iterator iterator(){
@@ -63,16 +74,16 @@ public class BinaryTree {
 	}*/
 	
 	public static void main(String[] args){
-		int[] values = new int[8];
-		for(int i=0;i<8;i++){
-			int num = (int)(Math.random() * 15);
-			//System.out.println(num);
-			//if(Arrays.binarySearch(values, num)<0)
-			if(!contains(values,num))
-				values[i] = num;
-			else
-				i--;
-		}
+		int[] values = {9,14,1,12,4,3,13,10};
+//		for(int i=0;i<8;i++){
+//			int num = (int)(Math.random() * 15);
+//			//System.out.println(num);
+//			//if(Arrays.binarySearch(values, num)<0)
+//			if(!contains(values,num))
+//				values[i] = num;
+//			else
+//				i--;
+//		}
 		
 		System.out.println(Arrays.toString(values));
 		
@@ -84,6 +95,10 @@ public class BinaryTree {
 		System.out.println(root.find(13));
 		
 		root.display();
+		System.out.println();
+		root.display2();
+		System.out.println();
+		root.display3();
 		
 	}
 	
