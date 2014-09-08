@@ -27,7 +27,21 @@ public class Sort {
 			}
 		}
 	}
-
+	
+	/**从前往后（顺序）进行多次扫描，关键字较大的记录将逐渐从前面往后面移动*/
+	public void bubbleSort2(int[] a){
+		int i ,j;
+		for ( i = a.length-1; i > 1; i--) {
+			for ( j = 0; j < i; ++j) {
+				if (a[j]>a[j+1]) {
+					swap(a, j, j+1);
+				}
+			}
+			
+		}
+		
+	}
+/**-----顺序和逆序的区别在与开始点是从头还是从后开始，然后第二个for循环中的限制条件是从头开始减还是从后开始减，之后就是顺序是大的往后，逆序是小的往前---*/
 	/****************
 	 * 优化的冒泡排序 ********************
 	 * 为了提升冒泡排序法的效率，可对BubbleSort函数进行改进，当在某一遍扫描时，发现数据都已经按顺序排列了，就不再进行后继的扫描，而结束排序过程
@@ -73,9 +87,9 @@ public class Sort {
 		for (i = 1; i < a.length; ++i) {// 0->length
 			temp = a[i];
 			for (j = i; j > 0 && temp < a[j - 1]; --j) {// 只有小于上一个数才进行比较交换
-				a[j] = a[j - 1];
+				a[ j ] = a[j - 1];
 			}
-			a[j] = temp;
+			a[ j ] = temp;
 		}
 	}
 
@@ -144,6 +158,7 @@ public class Sort {
 	void mergeSort(int[] a) {
 		int[] temp = new int[a.length];// 用于暂时存放数据内容
 		mSort(a, temp, 0, a.length - 1);
+		//mergeSort(temp, a, 0, a.length - 1);
 	}
 
 	private void mSort(int[] a, int[] temp, int s, int e) {
@@ -155,22 +170,122 @@ public class Sort {
 		/* 因为每次调用排序后的数组和原来数组a[]不相同了，而我们要的是后来改变的数组，所以只能在这里初始化temp */
 		for (int i = s; i <= e; i++) {
 			temp[i] = a[i];
+			System.out.println("temp"+i+"="+temp[i]);
 		}
 		int i1 = s;
 		int i2 = mid + 1;
+		System.out.println("s="+s+",mid="+mid+",e="+e);
 		for (int cur = s; cur <= e; cur++) {/* 实现数组归并 */
 			if (i1 == mid + 1) {
+				System.out.println("1="+a[cur]+",cur="+cur+",i1="+i1+",i2="+i2);
 				a[cur] = temp[i2++];
+				
 			} else if (i2 == e + 1) {
+				System.out.println("2="+a[cur]+",cur="+cur+",i1="+i1+",i2="+i2);
 				a[cur] = temp[i1++];
-			} else if (temp[i1] < temp[i2]) {
+				
+			} else
+				if (temp[i1] < temp[i2]) {
+				System.out.println("3="+a[cur]+",cur="+cur+",i1="+i1+",i2="+i2);
 				a[cur] = temp[i1++];
+				
 			} else {
+				System.out.println("4="+a[cur]+",cur="+cur+",i1="+i1+",i2="+i2);
 				a[cur] = temp[i2++];
+				
 			}
 		}
 	}
 
+    /**
+     * 归并排序 (递归实现)
+     * 前提： 每个元素要有可比性，这里元素必须实现Comparable接口。
+     * 基本原理为：1.拆分 假设有N个元素的列表，首先把它拆分成2个或2个
+     * 以上的元素组成的新的列表(这里我的新列表长度不超过3)，分别对对它们进行排序。
+     * 2.归并。把所有的排好序的子类表两两归并，如此重复，直到归并成一个含N个
+     * 元素的有序列表为止
+     * 图解：(大于3就继续分解)
+     *  大于3          8    7    6    5     4     3     2     1
+     *                                分|解
+     *                                  |
+     *  大于3            8  7  6  5            4   3   2   1 
+     *                     分|解                  分|解
+     *                       |                      | 
+     *  小于 3            8 7   6 5             4  3    2 1
+     *  排序              7 8   5 6             3  4    1 2 
+     *  归并                 |                       | 
+     *                  7   8  5  6            3  4    1  2 
+     *                       |                       |
+     *  顺序保存        5   6  7  8            1  2    3  4
+     *                                   |
+     *  归并           5    6    7    8   1    2    3     4
+     *  				 |
+     *  顺序保存       1    2    3    4   5    6    7     8
+     * @param src 临时中间数组，它是目标数组的拷贝
+     * @param target 目标排序数组
+     * @param low 需排序的起始索引
+     * @param high 需排序的结束索引
+     * 
+     */
+    public  void mergeSort(int[] src,int[] dest,int low,int high){
+    	int length = high - low;
+    	if(length < 3 ){	//对长度小于3的列表排序
+    		//排序方法一：起泡排序(大数沉底)
+//    		for(int i=low;i<high-1;i++){
+//    			for(int j=low;j<high-1-i+low;j++){
+//    				if(((Comparable) dest[j]).compareTo(dest[j+1]) > 0){
+//        				swap(dest, j, j+1); 
+//        			}
+//    			}
+//    		}
+    		//排序方法二：这是起泡排序的一种变体（小数上浮）
+    		for (int i = low; i < high; i++){
+    			for (int j = i; j > low ; j--){
+    				if(dest[j - 1]>dest[j]){
+    					swap(dest, j-1, j); 
+    				}
+    			}
+    		}
+    		return;
+    	}
+    	
+    	int mid = (high + low)/2;	//拆分
+    	mergeSort(dest, src, low, mid);	 //递归，可能会继续拆分(那么必然继续合并)
+    	mergeSort(dest, src, mid, high);
+    	
+    	//开始归并,方法一
+//    	for(int i=low,p=low,q=mid;i<high;i++){
+//    		//第一个条件时为了添加剩余的值
+//			if(q >= high || (p < mid &&((Comparable) src[p]).compareTo(src[q]) <= 0)){
+//				dest[i] = src[p++];
+//			}else{
+//				dest[i] = src[q++];
+//			}
+//    	}
+    	
+    	//开始归并，方法二
+    	int i = low;
+    	int p = low;	//第一个列表指针
+    	int q = mid;    //第二个列表指针
+    	while(p < mid && q <high){
+    		if(src[p]<src[q]){
+    			dest[i++] = src[p++];
+    		}else{
+    			dest[i++] = src[q++];
+    		}
+    	}
+    	//添加剩余的值
+    	while(p < mid && i<high){
+    		dest[i++] = src[p++];
+    	}
+    	while(q < high && i<high){
+    		dest[i++] = src[q++];
+    	}
+
+
+
+    }
+	
 	/********************
 	 * 快速排序 ************************* 快速排序使用分治策略来把待排序数据序列分为两个子序列，具体步骤为：
 	 * 
@@ -218,8 +333,9 @@ public class Sort {
 	// 打印数组
 	public void print(int[] a) {
 		for (int i = 0; i < a.length; ++i) {
-			System.out.println(a[i]);
+			System.out.print(a[i]+" ");
 		}
+		System.out.println("");
 	}
 
 	/**
@@ -227,19 +343,22 @@ public class Sort {
 	 */
 	public static void main(String[] args) {
 		Sort sort = new Sort();
-		int a[] = { 112, 55, 42, 7, 14, 5, 74, 5445, 5 };
+		int a[] = { 112, 55, 42, 7, 14, 5, 74, 5445 };
+		//int b[] = { 112, 55, 42, 7, 14, 5, 74, 5445, 5 };
 		long start = System.nanoTime();
-		// sort.betterBubbleSort(a);
+		 //sort.betterBubbleSort(b);
 		// sort.bubbleSort(a);
 		// sort.insertSort(a);
 		// sort.bubbleSort(a);
 		// sort.selectSort(a);
 		// sort.shellSort(a);
-		// sort.heapSort(a);
-		// sort.mergeSort(a);
-		sort.quickSort(a);
+		 //sort.heapSort(a);
+		 sort.mergeSort(a);
+		//sort.quickSort(a);
+		//sort.bubbleSort2(a);
 		System.out.println(System.nanoTime() - start);
 		sort.print(a);
+		//sort.print(b);
 
 	}
 
